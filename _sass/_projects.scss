@@ -13,10 +13,11 @@
 
         img {
             height: auto;
+            opacity: 0.5;
             position: relative;
-                left: -25%;
-                top: -5%;
-            width: 500px;
+                left: 0%;
+                top: 0%;
+            width: 150px;
         }
 
         a {
@@ -32,9 +33,10 @@
                 left: 0;
                 bottom: 0;
                 right: 0;
-                background: rgba(0,0,0,0.4);
+                background: rgb(170, 14, 162);
+                opacity: 0.9;
                 color: $grey-color-light;
-                padding: 40px;
+                padding: 20px;
                 text-align: center;
 
                 h1 {
