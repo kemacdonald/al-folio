@@ -2,7 +2,7 @@
 layout: page
 title: projects
 permalink: /projects/
-description: software development and research projects that promote open and reproducible science
+description: software development and research projects that I have contributed to in order to promote open and reproducible science
 ---
 
 {% for project in site.projects %}

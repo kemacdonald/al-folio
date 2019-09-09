@@ -54,9 +54,9 @@
     {% elsif entry.type == "inproceedings" %}
       <em>In {{entry.booktitle}}</em>
     {% endif %}
-    {% if entry.year %}
+    <!-- {% if entry.year %}
       {{entry.year}}
-    {% endif %}
+    {% endif %} -->
     </span>
   {% endif %}
 
@@ -71,7 +71,10 @@
     [<a href="http://psyarxiv.com/{{ entry.psyarxiv }}" target="_blank">preprint</a>]
   {% endif %}
   {% if entry.html %}
-    [<a href="{{ entry.html }}" target="_blank">html</a>]
+    [<a href="{{ entry.html }}" target="_blank">{{ entry.html_name }}</a>]
+  {% endif %}
+  {% if entry.html2 %}
+    [<a href="{{ entry.html2 }}" target="_blank">{{ entry.html2_name }}</a>]
   {% endif %}
   {% if entry.pdf %}
     [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>]
@@ -90,6 +93,12 @@
   {% endif %}
   {% if entry.osf %}
     [<a href="{{ entry.osf }}" target="_blank">osf page</a>]
+  {% endif %}
+  {% if entry.misc1 %}
+    [<a href="{{ entry.misc1 | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">{{ entry.misc1_name }}</a>]
+  {% endif %}
+  {% if entry.misc2 %}
+    [<a href="{{ entry.misc2 | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">{{ entry.misc2_name }}</a>]
   {% endif %}
   </span>
 

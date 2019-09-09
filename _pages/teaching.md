@@ -2,9 +2,11 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: teaching experience and materials
+years: [2019, 2018, 2017, 2016, 2015, 2014]
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
-
-Organize your courses by years, topics, or universities, however you like!
+{% for y in page.years %}
+  <h3 class="year">{{y}}</h3>
+  {% bibliography -f teaching -q @*[year={{y}}]* %}
+{% endfor %}
